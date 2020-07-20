@@ -20,6 +20,11 @@
     <build>
         <plugins>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.7.1</version>
+            </plugin>
+            <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
@@ -106,10 +111,27 @@
         </profile>
     </profiles>
 
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-report-plugin</artifactId>
+                <version>3.0.0-M5</version>
+                <configuration>
+                    <skipSurefireReport>${skipSurefireReport}</skipSurefireReport>
+                    <reportsDirectories>
+                        <reportsDirectory>${basedir}/target/failsafe-reports</reportsDirectory>
+                    </reportsDirectories>
+                </configuration>
+            </plugin>
+        </plugins>
+    </reporting>
+
     <properties>
         <maven.compiler.version>3.8.0</maven.compiler.version>
         <maven.failsafe.version>2.22.0</maven.failsafe.version>
         <maven.build.helper.version>3.0.0</maven.build.helper.version>
+        <skipSurefireReport>true</skipSurefireReport>
     </properties>
 
 </project>
