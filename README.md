@@ -28,7 +28,10 @@ To get the html report, you have to run this command
 ```
  mvn verify && mvn site
 ```
-After that you can find the 
+After that you can find the html file under
+``` 
+cd target/site/failsafe-report.html
+``` 
 
 ## Built With
 
