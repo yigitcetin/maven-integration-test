@@ -4,7 +4,7 @@ An integration test using maven dependency management with failsafe plugin
 
 ## Running the tests
 
-To see the test result, you have run these commands at below
+To see the test result, you have run one of these commands in project directory
 
 ```
 mvn verify
@@ -17,14 +17,14 @@ mvn integration-test
 
 ## Reports
 
-### XML Reports
+### XML Report
 You can find the report after test finished under target directory
 ``` 
 cd target/failsafe-reports 
 ```  
 
 ### Html Report
-To get the html report, you have to run this command
+To get the html report, you have to run this command in project directory
 ```
  mvn verify && mvn site
 ```
