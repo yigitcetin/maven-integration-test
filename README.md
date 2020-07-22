@@ -17,20 +17,13 @@ mvn integration-test
 
 ## Reports
 
-### XML Report
-You can find the report after test finished under target directory
-``` 
-cd target/failsafe-reports 
-```  
-
-### Html Report
 To get the html report, you have to run this command in project directory
 ```
  mvn verify && mvn site
 ```
 After that you can find the html file under
 ``` 
-cd target/site/failsafe-report.html
+open target/site/failsafe-report.html
 ``` 
 
 ## Built With
